@@ -1,0 +1,11 @@
+marker_id,image_filename,model,price,engine
+1,audi-a5.png,Audi A5,51.000 EUR,160 CV
+2,bmw-serie3.png,BMW Serie 3,48.000 EUR,190 CV
+3,mercedes-gle.png,Mercedes GLE,90.000 EUR,270 CV
+4,rangerover-evoque.png,Range Rover Evoque,51.000 EUR,180 CV
+5,seat-ibiza.png,Seat Ibiza,18.000 EUR,100 CV
+6,volkswagen-troc.png,Volkswagen T-Roc,30.000 EUR,115 CV
+7,tesla-modelx.png,Tesla Model X,100.000 EUR,670 CV
+8,porsche-cayenne.png,Porsche Cayenne,120.000 EUR,470 CV
+9,mclaren-720s.png,McLaren 720s,290.000 EUR,720 CV
+10,ferrari-f12.png,Ferrari F12,310.000 EUR,780 CV

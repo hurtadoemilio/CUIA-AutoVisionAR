@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario AutoVisionAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Manual de Usuario</h1>
+        <div class="manual-steps">
+            <h2>Cómo usar AutoVisionAR:</h2>
+            <ol>
+                {% for step in steps %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <a href="{{ url_for('home') }}" class="button">Página Principal</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.venv
+.idea
+poetry.lock
+app/__pycache__
+app/data/faces/emilio-hurtado.jpg

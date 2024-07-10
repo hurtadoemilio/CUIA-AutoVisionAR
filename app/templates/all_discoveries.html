@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Discoveries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>All User Discoveries</h1>
+    {% for username, discoveries in all_discoveries.items() %}
+        <h2>{{ username }}</h2>
+        <ul>
+        {% for car_id in discoveries %}
+            <li>{{ car_data[car_id]['model'] }} (ID: {{ car_id }})</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

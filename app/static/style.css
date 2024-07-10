@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+img, #video_feed {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.button, #login_button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.manual-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.camera-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.discovered-btn {
+    background-color: #FF5733;
+    color: white;
+}
+
+#login_button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button:hover, #login_button:hover {
+    opacity: 0.8;
+    background-color: #45a049;
+}
+
+.manual-steps {
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.manual-steps ol {
+    padding-left: 20px;
+}
+
+.manual-steps li {
+    margin-bottom: 10px;
+}
+
+.login-container, .register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2, .register-container h2 {
+    margin-top: 0;
+}
+
+.login-container form, .register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label, .register-container label {
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"], .login-container input[type="password"],
+.register-container input[type="text"], .register-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container input[type="submit"], .register-container input[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover, .register-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.facial-login-link {
+    margin-top: 1rem;
+}

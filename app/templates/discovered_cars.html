@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coches Descubiertos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Coches Descubiertos</h1>
+        {% if discovered_cars %}
+            <ul>
+            {% for id, car in discovered_cars.items() %}
+                <li>
+                    <h2>ID: {{ id }}</h2>
+                    <p>Modelo: {{ car['model'] }}</p>
+                    <img src="{{ url_for('static', filename='images/' + car['image_filename']) }}" alt="{{ car['model'] }}" style="max-width: 300px;">
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se ha descubierto ningún coche todavía.</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}" class="button">Página Principal</a>
+    </div>
+</body>
+</html>

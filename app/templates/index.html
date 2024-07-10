@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoVisionAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a AutoVisionAR {{ username }}</h1>
+        <img src="{{ url_for('static', filename='images/home.png') }}" alt="App Image">
+        <p>Explora coches usando realidad aumentada.</p>
+        <div class="button-container">
+            <button class="button manual-btn" onclick="location.href='{{ url_for('manual') }}'">Manual de Usuario</button>
+            <button class="button camera-btn" onclick="location.href='{{ url_for('camara') }}'">Cámara</button>
+            <button class="button discovered-btn" onclick="location.href='{{ url_for('discovered_cars_page') }}'">Coches Descubiertos</button>
+        </div>
+    </div>
+</body>
+</html>

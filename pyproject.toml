@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "autovisionar"
+version = "0.1.0"
+description = "AutoVisionAR es una aplicación web basada en Flask que utiliza realidad aumentada para mostrar coches. Detecta marcadores ArUco a través de una cámara y superpone modelos de coches e información sobre los marcadores."
+authors = ["Emilio Román Núñez Hurtado <emiliornh@correo.ugr.es>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+Flask = "^3.0.3"
+opencv-python = "^4.10.0.84"
+speechrecognition = "^3.10.4"
+pyaudio = "^0.2.14"
+pygame = "^2.6.0"
+requests = "^2.32.3"
+dlib = "^19.24.4"
+face-recognition = "^1.3.0"
+numpy = "1.26.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

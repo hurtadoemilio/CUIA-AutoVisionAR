@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión - Reconocimiento facial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio de sesión por reconocimiento facial</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <div>
+            <img id="video_feed" src="{{ url_for('facial_recognition_feed') }}" width="640" height="480">
+        </div>
+        <button id="login_button">Iniciar sesión</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#login_button').click(function() {
+                var canvas = document.createElement('canvas');
+                var video = document.getElementById('video_feed');
+                canvas.width = video.width;
+                canvas.height = video.height;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                canvas.toBlob(function(blob) {
+                    var formData = new FormData();
+                    formData.append('file', blob, 'snapshot.jpg');
+
+                    $.ajax({
+                        url: '/process_facial_login',
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            if (response.success) {
+                                window.location.href = '/';
+                            } else {
+                                alert('Cara no reconocida');
+                            }
+                        },
+                        error: function() {
+                            alert('Ha ocurrido un error durante el inicio de sesión por reconocimiento facial');
+                        }
+                    });
+                }, 'image/jpeg');
+            });
+        });
+    </script>
+</body>
+</html>
